@@ -1,3 +1,6 @@
+#ifndef _CLASS_PROTOTYPES_H_
+#define _CLASS_PROTOTYPES_H_
+
 struct SquareIndex;
 struct Px;
 struct SquareTriangle;
@@ -10,3 +13,5 @@ struct ColorButton;
 struct SettingsMenu;
 struct Game;
 struct MainMenu;
+
+#endif

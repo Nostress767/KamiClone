@@ -1,3 +1,11 @@
+#ifndef _CONST_DEFINITIONS_H_
+#define _CONST_DEFINITIONS_H_
+
+#include "olcPixelGameEngine.h"
+#include <tuple>
+#include <set>
+#include <unordered_map>
+
 constexpr int kSquareX_Amount = 16;
 constexpr int kSquareY_Amount = 10;
 constexpr int kLevelsAmount = 5;
@@ -90,3 +98,5 @@ const std::string kLevels[kLevelsAmount] = {"\
 5 5 5 4 4 1 1 1 4 1 1 2 2 2 3 3\n\
 5 5 5 5 4 4 1 1 1 1 1 1 2 2 2 3\n\
 "};
+
+#endif

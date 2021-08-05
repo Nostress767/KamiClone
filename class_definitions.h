@@ -1,3 +1,11 @@
+#ifndef _CLASS_DEFINITIONS_H_
+#define _CLASS_DEFINITIONS_H_
+
+#include "olcPixelGameEngine.h"
+#include "const_definitions.h"
+#include "game_settings.h"
+#include "class_prototypes.h"
+
 struct SquareIndex{
   int row = 0;
   int column = 0;
@@ -108,3 +116,5 @@ struct Game : public Scene{
   void DrawBoard();
   void FindSquare();
   void LoadLevel();};
+
+#endif

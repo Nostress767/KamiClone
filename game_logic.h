@@ -1,3 +1,16 @@
+#ifndef _GAME_LOGIC_H_
+#define _GAME_LOGIC_H_
+
+#include "olcPixelGameEngine.h"
+#include "const_definitions.h"
+#include "game_settings.h"
+#include "class_prototypes.h"
+#include "class_definitions.h"
+#include "func_prototypes.h"
+#include "method_definitions.h"
+#include <tuple>
+#include <unordered_map>
+
 bool SaveChanges(std::vector<std::unique_ptr<RectButton>>& buttons){
   bool nothing_changed = true;
   for(auto &button:buttons){
@@ -177,3 +190,5 @@ std::array<int,3> Hint(LogicBoard T, int n_actions){
   if (nc[0] == -1 || nc[1] == -1) return {0,0,0};
   int i = nc[0] / kSquareX_Amount; int j = nc[0] % kSquareX_Amount;
   return {i,j,nc[1]};}
+
+#endif

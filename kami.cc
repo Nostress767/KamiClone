@@ -1,6 +1,14 @@
-#include "includes.h"
+//TODO: (try to)Adopt https://google.github.io/styleguide/cppguide.html
 
-//(trying to)Adopt https://google.github.io/styleguide/cppguide.html
+#define OLC_PGE_APPLICATION
+#include "olcPixelGameEngine.h"
+#include "const_definitions.h"
+#include "game_settings.h"
+#include "class_prototypes.h"
+#include "class_definitions.h"
+#include "func_prototypes.h"
+#include "method_definitions.h"
+#include "game_logic.h"
 
 class Kami : public olc::PixelGameEngine
 {

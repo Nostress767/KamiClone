@@ -1,3 +1,13 @@
+#ifndef _METHOD_DEFINITIONS_H_
+#define _METHOD_DEFINITIONS_H_
+
+#include "olcPixelGameEngine.h"
+#include "const_definitions.h"
+#include "game_settings.h"
+#include "class_prototypes.h"
+#include "class_definitions.h"
+#include "func_prototypes.h"
+
 std::ostream &operator<<(std::ostream &os, const SquareIndex& s_i){
   return os << s_i.row << ' ' << s_i.column << '\n';}
 
@@ -244,3 +254,5 @@ void MainMenu::DrawScene(){
   pge_ptr->SetDrawTarget(layer);
   pge_ptr->Clear(olc::YELLOW);
   DrawButtons();}
+
+#endif

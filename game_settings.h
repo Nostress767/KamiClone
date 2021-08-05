@@ -1,3 +1,6 @@
+#ifndef _GAME_SETTINGS_H_
+#define _GAME_SETTINGS_H_
+
 // Game Settings
 int square_setting_counter = 3; // 0 -> 5
 int screen_setting_counter = 1; // 0 -> 3
@@ -14,3 +17,5 @@ int screen_x_size = (square_size * kSquareX_Amount) + board_x_offset;
 int screen_y_size = square_size * kSquareY_Amount;
 int board_x_size = square_size * kSquareX_Amount;
 int board_y_size = square_size * kSquareY_Amount;
+
+#endif
