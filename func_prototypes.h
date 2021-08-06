@@ -1,5 +1,5 @@
-#ifndef _FUNC_PROTOTYPES_H_
-#define _FUNC_PROTOTYPES_H_
+#ifndef _KAMI_FUNC_PROTOTYPES_H_
+#define _KAMI_FUNC_PROTOTYPES_H_
 
 #include "olcPixelGameEngine.h"
 #include "const_definitions.h"

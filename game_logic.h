@@ -1,5 +1,5 @@
-#ifndef _GAME_LOGIC_H_
-#define _GAME_LOGIC_H_
+#ifndef _KAMI_GAME_LOGIC_H_
+#define _KAMI_GAME_LOGIC_H_
 
 #include "olcPixelGameEngine.h"
 #include "const_definitions.h"

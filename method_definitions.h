@@ -1,5 +1,5 @@
-#ifndef _METHOD_DEFINITIONS_H_
-#define _METHOD_DEFINITIONS_H_
+#ifndef _KAMI_METHOD_DEFINITIONS_H_
+#define _KAMI_METHOD_DEFINITIONS_H_
 
 #include "olcPixelGameEngine.h"
 #include "const_definitions.h"

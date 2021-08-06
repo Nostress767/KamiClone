@@ -1,5 +1,5 @@
-#ifndef _CONST_DEFINITIONS_H_
-#define _CONST_DEFINITIONS_H_
+#ifndef _KAMI_CONST_DEFINITIONS_H_
+#define _KAMI_CONST_DEFINITIONS_H_
 
 #include "olcPixelGameEngine.h"
 #include <tuple>

@@ -1,5 +1,5 @@
-#ifndef _CLASS_DEFINITIONS_H_
-#define _CLASS_DEFINITIONS_H_
+#ifndef _KAMI_CLASS_DEFINITIONS_H_
+#define _KAMI_CLASS_DEFINITIONS_H_
 
 #include "olcPixelGameEngine.h"
 #include "const_definitions.h"

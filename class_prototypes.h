@@ -1,5 +1,5 @@
-#ifndef _CLASS_PROTOTYPES_H_
-#define _CLASS_PROTOTYPES_H_
+#ifndef _KAMI_CLASS_PROTOTYPES_H_
+#define _KAMI_CLASS_PROTOTYPES_H_
 
 struct SquareIndex;
 struct Px;

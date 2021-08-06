@@ -1,5 +1,5 @@
-#ifndef _GAME_SETTINGS_H_
-#define _GAME_SETTINGS_H_
+#ifndef _KAMI_GAME_SETTINGS_H_
+#define _KAMI_GAME_SETTINGS_H_
 
 // Game Settings
 int square_setting_counter = 3; // 0 -> 5
