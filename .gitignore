@@ -1,3 +1,4 @@
 olcPixelGameEngine.h
 *.obj
 *.exe
+*.out
