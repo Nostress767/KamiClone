@@ -30,9 +30,10 @@ void ChangeScene(olc::PixelGameEngine* pge,std::vector<std::unique_ptr<Scene>>* 
     } else if (scene == kMainMenu && scenes->back()->type != kMainMenu) {
       scenes->pop_back();
       scenes->push_back(std::make_unique<MainMenu>(pge,scenes));
-    } else if (scene == kGameScreen && scenes->back()->type != kGameScreen){
+    } else if (scene == kGameScreen){
       scenes->pop_back();
-      scenes->push_back(std::make_unique<Game>(pge,scenes,level));}
+      if(level < kLevelsAmount) scenes->push_back(std::make_unique<Game>(pge,scenes,level));
+      else scenes->push_back(std::make_unique<MainMenu>(pge,scenes));}
   } else if (scenes->size() == 1) {
     if (scene == kMainMenu) {
       scenes->push_back(std::make_unique<MainMenu>(pge,scenes));
@@ -151,7 +152,7 @@ TableTuple LoadBoard(int level){
   return {metadata[0], metadata[1], metadata[4], temparray};}
 void Burn(LogicBoard& array,int l,int c,int original_color){
   if (!(l<0||c<0||l>=kSquareY_Amount||c>=kSquareX_Amount)) {
-    if (array[l][c] > 0 && array[l][c] == original_color){
+    if (array[l][c] >= 0 && array[l][c] == original_color){
       array[l][c] = -1;
       Burn(array,l-1,c,original_color);
       Burn(array,l,c+1,original_color);

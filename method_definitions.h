@@ -181,10 +181,10 @@ void Game::DrawBoard(){
   for (int i = 0; i < kSquareY_Amount; i++){
     for (int j=0; j < kSquareX_Amount; j++){
       renderboard[i][j].DrawSquare(pge_ptr);
-      //kamiboard[i][j].DrawTriangle(this,0);
-      //kamiboard[i][j].DrawTriangle(this,1);
-      //kamiboard[i][j].DrawTriangle(this,2);
-      //kamiboard[i][j].DrawTriangle(this,3);
+      renderboard[i][j].DrawTriangle(pge_ptr,0);
+      renderboard[i][j].DrawTriangle(pge_ptr,1);
+      renderboard[i][j].DrawTriangle(pge_ptr,2);
+      renderboard[i][j].DrawTriangle(pge_ptr,3);
 }}}
 void Game::FindSquare(){
   if (mouse_pos[0] < board_x_offset){
@@ -208,7 +208,7 @@ void Game::update_logicboard(LogicBoard new_board){
 void Game::LoadLevel(){
   TableTuple temp = LoadBoard(current_level);
   logicboard = std::get<3>(temp);
-  //current_level = std::get<0>(temp);
+  current_level = std::get<0>(temp);
   n_actions = std::get<1>(temp);
   n_colors = std::get<2>(temp);
   update_logicboard(logicboard);
@@ -224,6 +224,9 @@ bool Game::Action(){
   FindSquare();
   if (hovered_square_index.row >= 0 && hovered_square_index.column >= 0){
     update_logicboard(Paint(logicboard, hovered_square_index.row, hovered_square_index.column, current_color));}
+  if (CheckGameOver(logicboard)) {
+    //std::cout << current_level << '\n';
+    ChangeScene(pge_ptr,scenes_ptr,kGameScreen,current_level);}
   return true;}
 
 MainMenu::MainMenu(olc::PixelGameEngine* pge, std::vector<std::unique_ptr<Scene>>* s_ptr) : Scene(pge,s_ptr){
